@@ -15,18 +15,19 @@ public class LapManager : MonoBehaviour
     void Start()
     {
         // Get players in the scene
-        foreach(CarIdentity carIdentity in GameObject.FindObjectsOfType<CarIdentity>())
+        foreach (CarIdentity carIdentity in GameObject.FindObjectsOfType<CarIdentity>())
         {
             playerRanks.Add(new PlayerRank(carIdentity));
         }
         ListenCheckpoints(true);
-        ui.UpdateLapText("Lap "+ playerRanks[0].lapNumber + " / " + totalLaps);
+        ui.UpdateLapText("Lap " + playerRanks[0].lapNumber + " / " + totalLaps);
         mainPlayerRank = playerRanks.Find(player => player.identity.gameObject.tag == "Player");
     }
 
     private void ListenCheckpoints(bool subscribe)
     {
-        foreach(CheckPoint checkpoint in checkpoints) {
+        foreach (CheckPoint checkpoint in checkpoints)
+        {
             //TODO : refacctor onChekpointEnter event
             if (subscribe)
                 checkpoint.onCheckPointEnter.AddListener(CheckpointActivated);
@@ -38,7 +39,7 @@ public class LapManager : MonoBehaviour
     public void CheckpointActivated(CarIdentity car, CheckPoint checkpoint)
     {
         PlayerRank player = playerRanks.Find((rank) => rank.identity == car);
-        if (checkpoints.Contains(checkpoint) && player!=null)
+        if (checkpoints.Contains(checkpoint) && player != null)
         {
             // if player has already finished don't do anything
             if (player.hasFinished) return;
@@ -48,8 +49,8 @@ public class LapManager : MonoBehaviour
             bool startingFirstLap = checkpointNumber == 0 && player.lastCheckpoint == -1;
             // finish line checkpoint is triggered & last checkpoint was reached
             bool lapIsFinished = checkpointNumber == 0 && player.lastCheckpoint >= checkpoints.Count - 1;
-            if (startingFirstLap || lapIsFinished) 
-            { 
+            if (startingFirstLap || lapIsFinished)
+            {
                 player.lapNumber += 1;
                 player.lastCheckpoint = 0;
 
@@ -63,7 +64,7 @@ public class LapManager : MonoBehaviour
                     // if first winner, display its name
                     if (player.rank == 1)
                     {
-                       ui.UpdateLapText(player.identity.drivername + " won");
+                        ui.UpdateLapText(player.identity.drivername + " won");
                     }
                     else if (player == mainPlayerRank) // display player rank if not winner
                     {
@@ -72,7 +73,8 @@ public class LapManager : MonoBehaviour
 
                     if (player == mainPlayerRank) onPlayerFinished.Invoke();
                 }
-                else {
+                else
+                {
                     // TODO : create attribute divername in CarIdentity 
                     Debug.Log(player.identity.drivername + ": lap " + player.lapNumber);
                     if (car.GetComponent<CarIdentity>().drivername == "Player") ui.UpdateLapText("Lap " + player.lapNumber + " / " + totalLaps);
