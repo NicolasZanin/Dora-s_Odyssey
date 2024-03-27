@@ -77,7 +77,8 @@ public class LapManager : MonoBehaviour
                 {
                     // TODO : create attribute divername in CarIdentity 
                     Debug.Log(player.identity.drivername + ": lap " + player.lapNumber);
-                    if (car.GetComponent<CarIdentity>().drivername == "Player") ui.UpdateLapText("Lap " + player.lapNumber + " / " + totalLaps);
+                    if (car.GetComponent<CarIdentity>().drivername == "Player") 
+                        ui.UpdateLapText("Lap " + player.lapNumber + " / " + totalLaps);
                 }
             }
             // next checkpoint reached
