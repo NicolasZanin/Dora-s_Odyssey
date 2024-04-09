@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator Countdown()
     {
+        yield return new WaitForSeconds(5);
         yield return new WaitForSeconds(1);
         Debug.Log("3");
         tricolorLights.SetProgress(1);
