@@ -3,7 +3,17 @@ guid: f185e32b9b6d8612f8282a8cb717f3fc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: balloon
+    second: {fileID: 2100000, guid: 4da20e25a632808448887534a01bdbab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ship
+    second: {fileID: 2100000, guid: 5b9c9ac977611714f8ece44167c2de00, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
