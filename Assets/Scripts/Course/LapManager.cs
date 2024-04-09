@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class LapManager : MonoBehaviour
 {
@@ -64,11 +65,11 @@ public class LapManager : MonoBehaviour
                     // if first winner, display its name
                     if (player.rank == 1)
                     {
-                        ui.UpdateLapText(player.identity.drivername + " won");
+                        SceneController.instance.NextLevel();
                     }
                     else if (player == mainPlayerRank) // display player rank if not winner
                     {
-                        ui.UpdateLapText("\nYou finished in " + mainPlayerRank.rank + " place");
+                        SceneController.instance.backWard();
                     }
 
                     if (player == mainPlayerRank) onPlayerFinished.Invoke();
