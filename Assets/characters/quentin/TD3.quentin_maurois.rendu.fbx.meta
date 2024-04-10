@@ -3,7 +3,17 @@ guid: b6ff38da3e51b706d8b0cdd0bb2c25ec
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CreePersonnage
+    second: {fileID: 2100000, guid: 1744aaa5ddda25741ba216c65f20b8c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tenis ball
+    second: {fileID: 2100000, guid: 0d653e07e0b5e9e40a7183ad9997698a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
