@@ -7,6 +7,6 @@ public class Firstscene : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("planet1");
+        SceneManager.LoadSceneAsync("planet1");
     }
 }

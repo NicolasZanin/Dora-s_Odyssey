@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,11 @@ public class SceneController : MonoBehaviour
     {
         StartCoroutine(loadLevel());
     }
+    
+    public void goToLevel(String scene)
+    {
+        StartCoroutine(loadLevel(scene));
+    }
 
     public void backWard()
     {
@@ -44,6 +50,14 @@ public class SceneController : MonoBehaviour
         transitionAnim.SetTrigger("End");
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        transitionAnim.SetTrigger("Start");
+    }
+    
+    IEnumerator loadLevel(String scene)
+    {
+        transitionAnim.SetTrigger("End");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync(scene);
         transitionAnim.SetTrigger("Start");
     }
 }
