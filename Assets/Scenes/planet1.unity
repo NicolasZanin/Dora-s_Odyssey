@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6499369, g: 0.6017558, b: 0.47333503, a: 1}
+  m_IndirectSpecularColor: {r: 0.64993644, g: 0.6017561, b: 0.47333533, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2089,7 +2089,7 @@ MonoBehaviour:
     answerOption1: I'm good
     answerOption2: I HATE YOU KING SHEEPER
     option1IndexJump: 0
-    option2IndexJump: 0
+    option2IndexJump: 3
     startDialogEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -2110,10 +2110,10 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   - text: Get Lost!!
-    isEnd: 0
-    isQuestion: 1
-    answerOption1: I'm good
-    answerOption2: I HATE YOU KING SHEEPER
+    isEnd: 1
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
     option1IndexJump: 0
     option2IndexJump: 0
     startDialogEvent:
@@ -2747,8 +2747,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

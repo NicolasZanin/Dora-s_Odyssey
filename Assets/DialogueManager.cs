@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -111,7 +112,7 @@ public class DialogueManager : MonoBehaviour
 
     private void HandleOptionSelected(int indexJump)
     {
-        optionSelected = false;
+        optionSelected = true;
         DisableButtons();
 
         currentDialogueIndex = indexJump;
