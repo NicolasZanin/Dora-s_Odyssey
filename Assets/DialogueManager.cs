@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     private List<DialogString> dialogueList;
     
     [Header("Player")] 
-    [SerializeField] private Polyart.FirstPersonController_Dreamscape firstPersonController;
+    [SerializeField] private Player firstPersonController;
     private Transform playerCamera;
 
     private int currentDialogueIndex = 0;

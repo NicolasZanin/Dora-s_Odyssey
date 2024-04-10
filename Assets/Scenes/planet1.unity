@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.64993644, g: 0.6017561, b: 0.47333533, a: 1}
+  m_IndirectSpecularColor: {r: 0.6499369, g: 0.6017558, b: 0.47333503, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1946,6 +1946,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572466974}
   m_CullTransparentMesh: 1
+--- !u!4 &589578090 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8702984421343955822, guid: 3c4074a4d937e8f138f360b848ac88e1, type: 3}
+  m_PrefabInstance: {fileID: 1167482342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &594567969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,6 +2069,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf7b35704d4905690b68048719f733a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueStrings:
+  - text: Hello !
+    isEnd: 0
+    isQuestion: 0
+    answerOption1: 
+    answerOption2: 
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: How are you ?
+    isEnd: 0
+    isQuestion: 1
+    answerOption1: I'm good
+    answerOption2: I HATE YOU KING SHEEPER
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: WHAT?!?!?
+    isEnd: 0
+    isQuestion: 1
+    answerOption1: I'm good
+    answerOption2: I HATE YOU KING SHEEPER
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  - text: Get Lost!!
+    isEnd: 0
+    isQuestion: 1
+    answerOption1: I'm good
+    answerOption2: I HATE YOU KING SHEEPER
+    option1IndexJump: 0
+    option2IndexJump: 0
+    startDialogEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endDialogEvent:
+      m_PersistentCalls:
+        m_Calls: []
+  npcTransform: {fileID: 589578090}
 --- !u!1 &596515052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2649,14 +2708,14 @@ RectTransform:
   m_GameObject: {fileID: 1043808538}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -0.3742835, y: 1.8535904, z: 1}
+  m_LocalScale: {x: -0.260534, y: 1.8535904, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2057347881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.363251, y: 2.2013245}
+  m_AnchoredPosition: {x: 14.6, y: 2.2013245}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1043808540
@@ -2688,8 +2747,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3194,6 +3253,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e879c881650d7f16a1b7340818c6afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueParent: {fileID: 2057347880}
+  dialogueText: {fileID: 1043808540}
+  option1Button: {fileID: 191990911}
+  option2Button: {fileID: 230530147}
+  typingSpeed: 0.05
+  turnSpeed: 2
+  firstPersonController: {fileID: 1169827187}
 --- !u!1 &1174797923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3888968976586346008, guid: 7fe23031e08197e48a72f12512338244, type: 3}
