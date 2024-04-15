@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 public class GameManager : MonoBehaviour
 {
+    public GameObject cam1;
+    public GameObject cam2;
     public PlayerControls playerControls;
     public AIControls[] aiControls;
     public LapManager lapTracker;
@@ -11,12 +13,14 @@ public class GameManager : MonoBehaviour
     public AudioClip highBeep;
     void Awake()
     {
+        cam1.SetActive(true);
+        cam2.SetActive(false);
         StartGame();
     }
     public void StartGame()
     {
         FreezePlayers(true);
-        StartCoroutine("Countdown");
+        //StartCoroutine("Countdown");
     }
     IEnumerator Countdown()
     {
