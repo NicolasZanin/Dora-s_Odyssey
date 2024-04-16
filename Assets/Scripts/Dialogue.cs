@@ -7,6 +7,7 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textMeshProUGUI;
+    public GameObject questBox;
 
     public string[] lines;
 
@@ -14,7 +15,7 @@ public class Dialogue : MonoBehaviour
 
     private int index;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         textMeshProUGUI.text = string.Empty;
         StartDialogue();
@@ -62,6 +63,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            questBox.SetActive(true);
             gameObject.SetActive(false);
         }
     }
