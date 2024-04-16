@@ -3,11 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textMeshProUGUI;
-    public GameObject questBox;
+    public GameObject questBoxToActivate;
+    public GameObject brickRoadToActivate;
+    
+    public GameObject questBoxToDeactivate;
+    public GameObject brickRoadToDeactivate;
 
     public string[] lines;
 
@@ -63,7 +68,10 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            questBox.SetActive(true);
+            questBoxToDeactivate.SetActive(false);
+            brickRoadToDeactivate.SetActive(false);
+            questBoxToActivate.SetActive(true);
+            brickRoadToActivate.SetActive(true);
             gameObject.SetActive(false);
         }
     }
