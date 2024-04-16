@@ -15,12 +15,14 @@ public class GameManager : MonoBehaviour
     {
         cam1.SetActive(true);
         cam2.SetActive(false);
-        StartGame();
+        FreezePlayers(true);
     }
     public void StartGame()
     {
+        cam1.SetActive(false);
+        cam2.SetActive(true);
         FreezePlayers(true);
-        //StartCoroutine("Countdown");
+        StartCoroutine("Countdown");
     }
     IEnumerator Countdown()
     {
