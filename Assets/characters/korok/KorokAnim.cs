@@ -5,6 +5,7 @@ using UnityEngine;
 public class KorokAnim : MonoBehaviour
 {
     [SerializeField] private Animator animationController;
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
