@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LapManager : MonoBehaviour
 {
     public List<CheckPoint> checkpoints;
-    public int totalLaps = 3;
+    public int totalLaps = 1;
     public UIManager ui;
 
     private List<PlayerRank> playerRanks = new List<PlayerRank>();

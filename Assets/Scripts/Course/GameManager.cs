@@ -56,12 +56,16 @@ public class GameManager : MonoBehaviour
         if (freeze)
         {
             playerControls.enabled = false;
-            aiControls[0].enabled = false;
+            foreach (var ai in aiControls) {
+                ai.enabled = false;
+            }
         }
         else
         {
             playerControls.enabled = true;
-            aiControls[0].enabled = true;
+            foreach (var ai in aiControls) {
+                ai.enabled = true;
+            }
         }
     }
 }
