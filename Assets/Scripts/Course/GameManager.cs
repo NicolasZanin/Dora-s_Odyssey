@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 public class GameManager : MonoBehaviour
 {
+    public GameObject cam1;
+    public GameObject cam2;
     public PlayerControls playerControls;
     public AIControls[] aiControls;
     public LapManager lapTracker;
@@ -11,16 +13,20 @@ public class GameManager : MonoBehaviour
     public AudioClip highBeep;
     void Awake()
     {
-        StartGame();
+        cam1.SetActive(true);
+        cam2.SetActive(false);
+        FreezePlayers(true);
     }
     public void StartGame()
     {
+        cam1.SetActive(false);
+        cam2.SetActive(true);
         FreezePlayers(true);
         StartCoroutine("Countdown");
     }
     IEnumerator Countdown()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         yield return new WaitForSeconds(1);
         Debug.Log("3");
         tricolorLights.SetProgress(1);
@@ -50,12 +56,16 @@ public class GameManager : MonoBehaviour
         if (freeze)
         {
             playerControls.enabled = false;
-            aiControls[0].enabled = false;
+            foreach (var ai in aiControls) {
+                ai.enabled = false;
+            }
         }
         else
         {
             playerControls.enabled = true;
-            aiControls[0].enabled = true;
+            foreach (var ai in aiControls) {
+                ai.enabled = true;
+            }
         }
     }
 }
