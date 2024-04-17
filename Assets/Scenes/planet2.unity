@@ -4848,12 +4848,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueStrings:
-  - text: "Bonjour, \xEAtes vous pr\xEAt pour cette course ?"
+  - text: Hello, are you ready for this race?
     beginCourse: 0
     isEnd: 0
     isQuestion: 1
-    answerOption1: Oui !!!!
-    answerOption2: Non
+    answerOption1: Yes !!!!
+    answerOption2: No
     option1IndexJump: 1
     option2IndexJump: 3
     startDialogueEvent:
@@ -4862,14 +4862,13 @@ MonoBehaviour:
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: "Alors les touches pour conduire la voitures sont Z pour avancer, Q pour
-      tourner \xE0 gauche, S pour reculer et D pour aller \xE0 droite, est ce que
-      c'est compris ?"
+  - text: So the buttons for driving the car are the directional arrows, is that
+      understood?
     beginCourse: 0
     isEnd: 0
     isQuestion: 1
-    answerOption1: Ouii !!!
-    answerOption2: Non
+    answerOption1: Yess !!!
+    answerOption2: No
     option1IndexJump: 2
     option2IndexJump: 3
     startDialogueEvent:
@@ -4878,7 +4877,7 @@ MonoBehaviour:
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: Alors c'est parti !!!
+  - text: So here we go !!!
     beginCourse: 1
     isEnd: 0
     isQuestion: 0
@@ -4892,7 +4891,7 @@ MonoBehaviour:
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: Dommage
+  - text: So bad
     beginCourse: 0
     isEnd: 1
     isQuestion: 0
